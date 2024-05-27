@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preguntas Frecuentes</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .question {
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+    }
+    .question:hover {
+      transform: scale(1.05);
+    }
+    .answer {
+      display: none;
+      transition: height 0.3s ease-in-out;
+    }
+    .answer.show {
+      display: block;
+    }
+    .fade-in {
+      animation: fadeIn 1s ease-out;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    .category {
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+    }
+    .category:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="inicio.html">AutoKart</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="inicio.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="productos.html">Productos</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="carrito.html">Carrito <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="faq.html">Preguntas</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Cerrar Sesión</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1 class="text-center mt-4 mb-5">Preguntas Frecuentes</h1>
+   
+    <div id="faqList">
+      <h3>Preguntas para Compra de Autos</h3>
+      <div class="question mb-3" data-toggle="collapse" data-target="#answer1" aria-expanded="false" aria-controls="answer1">
+        ¿Cómo puedo comprar un auto usado?
+      </div>
+      <div class="answer collapse" id="answer1">
+        <p>Para comprar un auto usado, puedes buscar en plataformas en línea especializadas en ventas de autos usados o visitar concesionarios de autos.</p>
+      </div>
+      <div class="question mb-3" data-toggle="collapse" data-target="#answer2" aria-expanded="false" aria-controls="answer2">
+        ¿Qué debo considerar al comprar un auto nuevo?
+      </div>
+      <div class="answer collapse" id="answer2">
+        <p>Al comprar un auto nuevo, debes considerar aspectos como el presupuesto, el tipo de auto que necesitas, las características de seguridad y el consumo de combustible.</p>
+      </div>
+      <div class="question mb-3" data-toggle="collapse" data-target="#answer3" aria-expanded="false" aria-controls="answer3">
+        ¿Puedo financiar la compra de un auto?
+      </div>
+      <div class="answer collapse" id="answer3">
+        <p>Sí, muchos concesionarios y bancos ofrecen opciones de financiamiento para la compra de autos nuevos y usados. Debes consultar las condiciones y tasas de interés.</p>
+      </div>
+
+      <!-- Preguntas para Ventas y Financiamiento -->
+      <h3 class="mt-5">Preguntas para Ventas y Financiamiento</h3>
+      <div class="question mb-3" data-toggle="collapse" data-target="#answer4" aria-expanded="false" aria-controls="answer4">
+        ¿Qué opciones de financiamiento ofrecen?
+      </div>
+      <div class="answer collapse" id="answer4">
+        <p>Ofrecemos diferentes opciones de financiamiento, incluyendo préstamos tradicionales, arrendamiento financiero y planes de financiamiento a plazos.</p>
+      </div>
+      <div class="question mb-3" data-toggle="collapse" data-target="#answer5" aria-expanded="false" aria-controls="answer5">
+        ¿Cómo puedo vender mi auto usado?
+      </div>
+      <div class="answer collapse" id="answer5">
+        <p>Para vender tu auto usado, puedes anunciarlo en plataformas en línea, como nuestro sitio web, o visitar concesionarios locales para obtener una oferta de recompra.</p>
+      </div>
+      <div class="question mb-3" data-toggle="collapse" data-target="#answer6" aria-expanded="false" aria-controls="answer6">
+        ¿Qué documentos necesito para solicitar un préstamo para autos?
+      </div>
+      <div class="answer collapse" id="answer6">
+        <p>Por lo general, necesitarás documentos como tu identificación oficial, comprobantes de ingresos y referencias crediticias al solicitar un préstamo para autos.</p>
+      </div>
+    </div>
+
+    <h2 class="mt-5 mb-4">Contáctanos</h2>
+    <form id="contactForm" class="fade-in">
+      <div class="form-group">
+        <label for="inputEmail">Correo Electrónico</label>
+        <input type="email" class="form-control" id="inputEmail" placeholder="Correo Electrónico" required>
+
+      <div class="form-group">
+        <label for="inputMessage">Mensaje</label>
+        <textarea class="form-control" id="inputMessage" rows="3" placeholder="Escribe tu mensaje aquí" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.category').click(function() {
+        const category = $(this).text().trim();
+        $('#faqList').empty().append(`<h3>Preguntas para ${category}</h3>`);
+      });
+    });
+  </script>
+
+  
+</body>
+</html>
